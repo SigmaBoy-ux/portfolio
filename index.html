@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -14,16 +17,17 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo">Portfel</a>
 
         <nav class="navbar">
             <a href="#home" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#Skills" style="--i:3">Skill</a>
-            <a href="#portfolios" style="--i:4">Portfolios</a>
-            <a href="#contact" style="--i:5">Contact</a>
+            <a href="#about" style="--i:2">Haqimda</a>
+            <a href="#Skills" style="--i:3">Ko'nikmalar</a>
+            <a href="#projects" style="--i:4">Loyihalar</a>
+            <a href="#portfolios" style="--i:5">Portfellar</a>
+            <a href="#contact" style="--i:6">Aloqa</a>
         </nav>
-        <p class="date" style="--i:6"></p>
+        <p class="date" style="--i:7"></p>
     </header>
     <section class="home" id="home">
         <div class="home__content">
@@ -37,11 +41,12 @@
                 <img src="./man.jpg" alt="">
             </div>
             <div class="home-sci">
-                <a style="--i:7" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a style="--i:8" href="https://www.instagram.com/muhammadbobur_muhammadsolih/"><i
+                <a style="--i:8" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a style="--i:9" target="_blank" href="https://www.instagram.com/muhammadbobur_muhammadsolih/"><i
                         class="fa-brands fa-instagram"></i></a>
-                <a style="--i:9" href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                <a style="--i:10" href="https://t.me/MBobur2012"><i class="fa-brands fa-telegram"></i></a>
+                <a style="--i:10" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a style="--i:11" href="https://t.me/Muhammabobur69" target="_blank"><i
+                        class="fa-brands fa-telegram"></i></a>
             </div>
             <a href="#" class="btn-box">Men haqimda</a>
         </div>
@@ -54,7 +59,7 @@
         </div>
 
         <div class="about-text">
-            <h2>About<span>Me</span></h2>
+            <h2>Men <span>haqimda</span></h2>
             <h4>Frontend dasturchisi</h4>
             <p>Men 1 yildan beri Frontend dasturchi sifatida faoliyat <br> yuritib kelmoqdaman. Shu vaqt davomida turli
                 xil
@@ -64,18 +69,18 @@
                 sababli bugungi bilimlarim uchun ustozimga katta rahmat aytaman.
             </p>
 
-            <a href="#" class="btn-box">Men Haqimda</a>
+            <a href="#" class="btn-box">Men Haqimda...</a>
         </div>
     </section>
 
     <section>
         <div class="services" id="services">
             <div class="container">
-                <h1 class="sub-title">My <span>Services</span></h1>
+                <h1 class="sub-title">Men <span>o'rganganim</span></h1>
                 <div class="services-list">
                     <div>
                         <i class="fa-solid fa-code" style="color: #00eeff;"></i>
-                        <h2>UI/UX Design</h2>
+                        <h2>Code Yozish</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, corrupti molestiae
                             numquam molestias repellendus repudiandae officia laborum explicabo obcaecati architecto.
                             Optio aliquam fugit qui nam vero! Aliquid repudiandae necessitatibus quos.</p>
@@ -83,15 +88,15 @@
                     </div>
                     <div>
                         <i class="fa-solid fa-crop" style="color: #00eeff;"></i>
-                        <h2>UI/UX Design</h2>
+                        <h2>Dezayn qilish</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, corrupti molestiae
                             numquam molestias repellendus repudiandae officia laborum explicabo obcaecati architecto.
                             Optio aliquam fugit qui nam vero! Aliquid repudiandae necessitatibus quos.</p>
                         <a href="#" class="read">Learn More</a>
                     </div>
                     <div>
-                        <i class="fa-brands fa-apple" style="color: #00eeff;"></i>
-                        <h2>UI/UX Design</h2>
+                        <i class="fa-solid fa-laptop-code" style="color: #00eeff;"></i>
+                        <h2>Sayt yaratish</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, corrupti molestiae
                             numquam molestias repellendus repudiandae officia laborum explicabo obcaecati architecto.
                             Optio aliquam fugit qui nam vero! Aliquid repudiandae necessitatibus quos.</p>
@@ -103,9 +108,9 @@
     </section>
 
     <section>
-        <h1 class="title">My <span>Skills</span></h1>
+        <h1 class="title"><span>Ko'nikmalar</span></h1>
         <div class="container1" id="Skills">
-            <h1 class="heading1">Technical Skills</h1>
+            <h1 class="heading1">Texnik ko'nikmalar</h1>
             <div class="Technical-bars">
                 <div class="bar"><i style="color: #c95d2e;" class="fa-brands fa-html5"></i>
                     <div class="info">
@@ -144,7 +149,7 @@
         </div>
 
         <div class="container1">
-            <h1 class="heading1">Professional Skills</h1>
+            <h1 class="heading1">Kasbiy mahorat</h1>
             <div class="radial-bars">
                 <div class="radial-bar">
                     <svg x="0px" y="0px" viewBox="0 0 200 200">
@@ -152,7 +157,7 @@
                         <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                     </svg>
                     <div class="percentage">90%</div>
-                    <div class="text">creativity</div>
+                    <div class="text">Ijodkorlik</div>
                 </div>
                 <div class="radial-bar">
 
@@ -161,7 +166,7 @@
                         <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                     </svg>
                     <div class="percentage">65%</div>
-                    <div class="text">Communication</div>
+                    <div class="text">Aloqa</div>
                 </div>
                 <div class="radial-bar">
 
@@ -170,7 +175,7 @@
                         <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                     </svg>
                     <div class="percentage">75%</div>
-                    <div class="text">Problem Solving</div>
+                    <div class="text">Muammoni hal qilish</div>
                 </div>
                 <div class="radial-bar">
 
@@ -179,8 +184,44 @@
                         <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                     </svg>
                     <div class="percentage">85%</div>
-                    <div class="text">TeamWork</div>
+                    <div class="text">Jamoa ishi</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project" id="projects">
+        <h1 class="title">Mening <span>Loyihalarim</span></h1>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="./Nurim.png" alt="Project 1">
+                <h3>Instagram Website</h3>
+                <p>Bu -> Instagram profil sahifasi, bunda men dark mode, light mode ishlatganman va telefondan
+                    foydalanib korsaham bo'ladi yani bu degani Ingis tilida (Respnsive) deyiladi</p>
+                <a href="https://ustozimnurim-insta-profile.netlify.app" target="_blank" class="btn-box">Loyihani
+                    Ko'rish</a>
+            </div>
+            <div class="project-card">
+                <img src="./emoji.png" alt="Project 2">
+                <h3>Emoji Explorer</h3>
+                <p>Bu -> Emoji izlovchi veb-sahifasi, bunda men JavaScript dan foydalanib yozganman, bunda siz emoji
+                    bosib turib Insonning yuzada ifodalash mumkin</p>
+                <a href="https://emojji.netlify.app" target="_blank" class="btn-box">Loyihani Ko'rish</a>
+            </div>
+            <div class="project-card">
+                <img src="./clersky.png" alt="Project 3">
+                <h3>ClerSky E-Commerce</h3>
+                <p>Bu -> ClerSky veb-sahifasi, bunda men HTML va CSS dan foydalanib yozganman, bunda siz kitob sifatida
+                    oqib kayfiyatingizni ko'tarishingiz mumkin va sizda ko'p hisiyotlar qoladi</p>
+                <a href="https://cleksy-site.netlify.app" target="_blank" class="btn-box">Loyihani Ko'rish</a>
+            </div>
+            <div class="project-card">
+                <img src="./LunchBox.png" alt="Project 4">
+
+                <h3>LunchBox</h3>
+                <p>Bu -> LunchBox veb-sahifasi, bunda men HTML va CSS dan foydalanib yozganman va checkbox ham
+                    ishlatganman, bunda siz taomlarni buyurtma berishingiz mumkin</p>
+                <a href="https://kfcbox.netlify.app/" target="_blank" class="btn-box">Loyihani Ko'rish</a>
             </div>
         </div>
     </section>
@@ -203,24 +244,25 @@
                     <td><img class="avatar" src="./umid.jpg" alt="user2"></td>
                     <td>Umidjon Sadullayev</td>
                     <td>@umid_jon</td>
-                    <td>Hali Ma'lum emas</td>
+                    <td><a href="https://portfolio-umidjon.netlify.app/" target="_blank">Umidjon's Portfolio</a></td>
                 </tr>
                 <tr>
                     <td><img class="avatar" src="./amirxon.jpg" alt="user3"></td>
                     <td>Amirxon Pardayev</td>
                     <td>@AmirxonPardayev</td>
-                    <td>Hali Ma'lum emas</td>
+                    <td><a href="https://amirxonpardayev.netlify.app/" target="_blank">Amirxon's Portfolio</a></td>
                 </tr>
                 <tr>
                     <td><img class="avatar" src="./akbarloy.png" alt="user4"></td>
                     <td>Akbarjon Lolayev</td>
                     <td>@AkbarjonLolayev</td>
-                    <td><a href="https://akbarjon-partfolio-pdp.netlify.app">Akbarjon-Portifolio</a></td>
+                    <td><a href="https://akbarjon-partfolio-pdp.netlify.app" target="_blank">Akbarjon's Portfolio</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
         <h2 class="hamma-title">Bizning <span>jamoamiz</span></h2>
-        <img class="hamma" src="./hammamiz.JPG" alt="">
+        <img class="hamma" src="./Billa.JPG" alt="">
     </section>
 
 
@@ -239,19 +281,22 @@
             <div class="contact-icons">
                 <a href="" style="--i:7"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="" style="--i:8"><i class="fa-brands fa-twitter"></i></a>
-                <a href="" style="--i:9"><i class="fa-brands fa-instagram"></i></a>
-                <a href="" style="--i:10"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.instagram.com/muhammadbobur_muhammadsolih/" target="_blank" style="--i:9"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me/Muhammabobur69" target="_blank" style="--i:10"><i
+                        class="fa-brands fa-telegram"></i></a>
             </div>
 
         </div>
 
         <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Enter your Name" required>
-                <input type="email" placeholder="Enter your Email" required>
+            <form class="form">
+                <input type="" class="name" placeholder="Enter your Name" required>
+                <input type="email" class="email" placeholder="Enter your Email" required>
 
                 <input type="" placeholder="Enter your Subject">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter your Message" required></textarea>
+                <textarea class="textarea" name="" id="" cols="40" rows="10" placeholder="Enter your Message"
+                    required></textarea>
                 <input type="submit" value="submit" class="send">
             </form>
         </div>
@@ -260,6 +305,9 @@
         <p>Develop with love by MuhammadBobur Omonov @ 2023</p>
     </div>
     <a href="#home" style="transition: 0.5s ease;" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <script src="./app.js"></script>
 </body>
