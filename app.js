@@ -59,16 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }),
 
         })
-        fetch(telegramUrl, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                chat_id: chat_id,
-                text: text
-            }),
-        })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
