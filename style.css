@@ -823,6 +823,10 @@ a {
     animation: slideLeft .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
+.hero4-title {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
 
 .contact {
     display: grid;
@@ -834,7 +838,7 @@ a {
 }
 
 .contact-text h2 {
-    font-size: 90px;
+    font-size: 80px;
     line-height: 1;
 }
 
@@ -849,10 +853,6 @@ a {
     font-weight: 600;
 }
 
-.hero4-title {
-    font-size: 40px;
-    margin-bottom: 50px;
-}
 
 .contact-text p {
     color: rgb(177, 177, 177);
