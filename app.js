@@ -24,6 +24,7 @@ setInterval(() => {
 
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".form");
 
@@ -78,13 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
             })
-        .catch(error => {
-            console.error(error);
-            Swal.fire({
-                title: "Xatolik",
-                text: "Server bilan ulanishda muammo",
-                icon: "error"
+            .catch(error => {
+                console.error(error);
+                Swal.fire({
+                    title: "Xatolik",
+                    text: "Server bilan ulanishda muammo",
+                    icon: "error"
+                });
             });
-        });
     });
 });
+

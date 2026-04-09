@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
 
 html {
@@ -12,6 +13,7 @@ html {
 body {
     color: #ededed;
     background: #001f36;
+
 }
 
 .header {
@@ -751,6 +753,144 @@ section {
 
 .hero4 h1 span {
     color: #0ef;
+}
+
+.family {
+    width: 100%;
+    padding: 90px 10%;
+    background: #001f36;
+    text-align: center;
+}
+
+.family-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.family-card {
+    width: 360px;
+    height: 320px;
+    background: rgba(5, 17, 41, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 239, 255, 0.2);
+}
+
+.family-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 239, 255, 0.5);
+}
+
+.family-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #0ef;
+}
+
+.family-card h3 {
+    color: #0ef;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.family-card p {
+    font-size: 16px;
+    color: #cceeff;
+}
+
+.kurator {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+}
+
+.kurator-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+    padding: 60px;
+    background: linear-gradient(135deg, #001f36, #003366);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+.kurator-wrapper:hover {
+    transform: scale(1.01) translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 239, 255, 0.4);
+}
+
+.kurator-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.kurator-img img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    transition: 0.4s;
+}
+
+.kurator-img img:hover {
+    transform: scale(1.05);
+}
+
+.kurator-content {
+    flex: 1;
+    color: #fff;
+}
+
+.kurator-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.kurator-content h1 span {
+    color: #00eaff;
+}
+
+.kurator-content h2 {
+    font-size: 28px;
+    color: #00eaff;
+    margin-bottom: 20px;
+}
+
+.kurator-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #d0faff;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+    .kurator-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kurator-img img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .kurator-content h1 {
+        font-size: 35px;
+    }
 }
 
 table {
