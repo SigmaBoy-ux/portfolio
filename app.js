@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const text = `
 📩 *Yangi ariza!*
 👤 Ismi: *${name}*
-📞 Telefon: *${email}*
+📞 Email: *${email}*
 💬 Izoh: ${message}
     `;
         console.log(text);
