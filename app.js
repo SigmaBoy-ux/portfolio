@@ -23,6 +23,7 @@ setInterval(() => {
 
 
 
+const submitButton = document.querySelector(".send");
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
+        disableSubmit();
 
         const name = form.querySelector(".name").value.trim();
         const email = form.querySelector(".email").value.trim();
@@ -63,13 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-
+                setTimeout(() => {
+                enableSubmit();
+                }, 1000);
                 if (data.ok) {
-                    Swal.fire({
-                        title: "Yuborildi",
-                        text: "Xabar muvaffaqiyatli jo'natildi",
-                        icon: "success"
-                    });
+                    setTimeout(() => {
+                        Swal.fire({
+                            title: "Yuborildi",
+                            text: "Xabar muvaffaqiyatli jo'natildi",
+                            icon: "success"
+                        });
+                    }, 1000);
                     form.reset();
                 } else {
                     Swal.fire({
@@ -90,3 +96,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+function disableSubmit() {
+    submitButton.disabled = true
+    submitButton.style.opacity = '0.5'
+    submitButton.style.cursor = 'not-allowed'
+    submitButton.textContent = 'Yuborilmoqda...'
+}
+
+function enableSubmit() {
+    submitButton.disabled = false
+    submitButton.style.opacity = '1'
+    submitButton.style.cursor = 'pointer'
+    submitButton.textContent = 'Yuborish'
+}
+
+
+window.addEventListener('scroll', function () {
+    const arrowUp = document.querySelector('.top');
+   if (window.scrollY > 800) {
+        arrowUp.style.opacity = 1;
+    } else {
+        arrowUp.style.opacity = 0;
+    }
+});

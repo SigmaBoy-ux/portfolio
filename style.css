@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 
+    transition: 0.3s ease;
 }
 
 html {
@@ -13,7 +14,6 @@ html {
 body {
     color: #ededed;
     background: #001f36;
-
 }
 
 .header {
@@ -21,7 +21,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 30px 10%;
     background: #051129c5;
     display: flex;
     justify-content: space-between;
@@ -43,6 +43,20 @@ body {
     animation: slideRight 1s ease forwards;
 }
 
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #0ef;
+    left: 0;
+    bottom: -8px;
+    border-radius: 2px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .5s;
+    opacity: 0;
+}
+
 .navbar a {
     display: inline-block;
     font-size: 18px;
@@ -55,6 +69,21 @@ body {
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
+
+.navbar a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #0ef;
+    left: 0;
+    bottom: -8px;
+    border-radius: 2px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .5s;
+    opacity: 0;
+}
+
 
 .navbar a:hover {
     color: #0ef;
@@ -86,13 +115,13 @@ body {
 .img {
     position: absolute;
     right: 10%;
-    bottom: 160px;
+    bottom: 280px;
     width: 400px;
     height: 400px;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid transparent;
-    background: linear-gradient(135deg, rgb(8, 154, 164), #0ab6d8, #002f39) border-box;
+    background: linear-gradient(135deg, rgb(8, 154, 164), #0ab6d8, #002f39);
     box-shadow: 0 0 50px rgba(0, 239, 255, 0.5), inset 0 0 50px rgba(0, 239, 255, 0.2);
     animation: imagePulse 3s ease-in-out infinite;
     display: flex;
@@ -233,9 +262,8 @@ body {
 
 .about-text p {
     color: #ededed;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
-    margin-bottom: 4rem;
 }
 
 #services {
@@ -253,8 +281,16 @@ body {
     color: #0ef;
 }
 
+.konikmalar {
+    max-width: 1700px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
 .container {
-    padding: 90px 10%;
+    width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .services-list {
@@ -289,35 +325,17 @@ body {
     color: #0ef;
 }
 
-.services-list div a {
+.services-list div p {
     text-decoration: none;
-    color: #081b29;
-    font-size: 14px;
+    color: #fff;
+    font-size: 20px;
     margin-top: 20px;
     display: inline-block;
     font-weight: 500;
 }
 
-.read {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 14px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 0 5px #0ef,
-        0 0 25px #0ef;
-}
 
-.read:hover {
-    box-shadow: 0 0 5px cyan,
-        0 0 25px cyan, 0 0 50px cyan,
-        0 0 100px cyan, 0 0 200px cyan;
-}
+
 
 .services-list div:hover {
     transform: translateY(-10px);
@@ -334,7 +352,7 @@ body {
 .project .title {
     margin-top: 0;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
 }
 
 .project-grid {
@@ -354,15 +372,15 @@ body {
     box-shadow: 0 0 10px rgba(0, 239, 255, 0.2),
         0 0 20px rgba(0, 239, 255, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 500px;
-    height: 420px;
+    width: 600px;
+    height: 460px;
     transform: rotate(-8deg);
 
 }
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     transition: 0.4s ease;
     transform: rotate(8deg);
@@ -376,17 +394,18 @@ body {
 .project-card h3 {
     color: #0ef;
     padding: 16px 16px 8px;
-    font-size: 22px;
+    font-size: 28px;
 }
 
 .project-card p {
     color: #cceeff;
     padding: 0 16px 16px;
     flex: 1;
+    font-size: 18px;
 }
 
 .project-card .btn-box {
-    width: 469px;
+    width: 565px;
     margin: 0 16px 16px;
     margin-top: 20px;
     text-align: center;
@@ -408,7 +427,7 @@ section {
     flex: 1;
     min-width: 500px;
     padding: 0 90px;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -475,6 +494,17 @@ section {
     animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.title-konikmalar {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 60px;
+    width: 100%;
+}
+
+.title-konikmalar span {
+    color: #0ef;
 }
 
 .title {
@@ -740,6 +770,7 @@ section {
 }
 
 .hero4 {
+    width: 100%;
     text-align: center;
     padding: 90px;
     min-height: 100vh;
@@ -763,16 +794,19 @@ section {
 }
 
 .family-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 40px;
 }
 
 .family-card {
-    width: 360px;
-    height: 320px;
+    margin-top: 100px;
+    width: 440px;
+    height: 360px;
     background: rgba(5, 17, 41, 0.8);
     border-radius: 20px;
     padding: 20px;
@@ -797,11 +831,11 @@ section {
 .family-card h3 {
     color: #0ef;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .family-card p {
-    font-size: 16px;
+    font-size: 22px;
     color: #cceeff;
 }
 
@@ -856,7 +890,7 @@ section {
 }
 
 .kurator-content h1 {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
@@ -894,7 +928,7 @@ section {
 }
 
 table {
-    width: 100%;
+    width: 1600px;
     border-collapse: collapse;
     background-color: #051129;
     box-shadow: 0 0 20px rgba(0, 239, 255, 0.2);
@@ -911,6 +945,17 @@ td {
     text-align: left;
     border-bottom: 1px solid #0ef;
     color: #ededed;
+}
+
+tr {
+    transition: 0.3s ease;
+}
+
+tr:hover {
+    transform: scale(1.01) translateY(-5px);
+    background-color: rgba(0, 238, 255, 0.381);
+    color: #081b29;
+    box-shadow: 0 0 10px #0ef;
 }
 
 th {
@@ -937,9 +982,11 @@ a {
     width: 100%;
     height: 500px;
     margin-top: 30px;
+    margin-left: 15px;
     border-radius: 10px;
     object-fit: cover;
     transition: 0.3s ease;
+
 }
 
 .hamma-title {
@@ -960,9 +1007,22 @@ a {
 .date {
     font-size: 18px;
     opacity: 0;
-    animation: slideLeft .5s ease forwards;
+    animation: slideRight .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
+
+.date::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #0ef;
+    margin-top: 5px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i) + .5s);
+    opacity: 0;
+}
+
 
 .hero4-title {
     font-size: 40px;
@@ -970,12 +1030,19 @@ a {
 }
 
 .contact {
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.container2 {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 3rem;
-    padding-left: 30px;
-    margin-top: 130px;
+    gap: 100px;
 }
 
 .contact-text h2 {
@@ -1057,7 +1124,7 @@ a {
 }
 
 .contact-form form input,
-form textarea {
+.contact-form form textarea {
 
     border: 1px solid rgba(0, 238, 255, 0.3);
     outline: none;
@@ -1093,15 +1160,16 @@ form textarea:focus {
 }
 
 .contact-form form .send {
-    display: inline-block;
     padding: 14px 60px;
+    width: 655px;
     background: #0ef;
     border-radius: 40px;
     font-size: 18px;
     color: #081b29;
     letter-spacing: 1px;
     text-decoration: none;
-    font-weight: 6pu00;
+    border: none;
+    font-weight: 600;
     transition: 0.3s;
     box-shadow: 0 0 5px #0ef,
         0 0 25px #0ef;
@@ -1112,8 +1180,7 @@ form textarea:focus {
 
 .contact-form form .send:hover {
     box-shadow: 0 0 5px cyan,
-        0 0 25px cyan, 0 0 50px cyan,
-        0 0 100px cyan, 0 0 200px cyan;
+        0 0 25px cyan, 0 0 50px cyan;
 }
 
 .last-text p {
@@ -1126,6 +1193,7 @@ form textarea:focus {
 }
 
 .top {
+    opacity: 0;
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
