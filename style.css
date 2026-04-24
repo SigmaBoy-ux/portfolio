@@ -1011,7 +1011,7 @@ a {
     animation-delay: calc(.2s * var(--i));
 }
 
-.date::after{
+.date::after {
     content: '';
     display: block;
     width: 100%;
@@ -1220,4 +1220,16 @@ form textarea:focus {
     color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 0 20px rgba(0, 238, 255, 0.6), 0 0 40px rgba(0, 238, 255, 0.4);
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #051129c5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00d4ff;
+    border-radius: 30px;
+    transition: 0.5s ease;
 }
