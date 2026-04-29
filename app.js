@@ -120,3 +120,57 @@ window.addEventListener('scroll', function () {
         arrowUp.style.opacity = 0;
     }
 });
+
+
+let skills = document.querySelectorAll(".progress-line span");
+
+
+let observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+
+
+      if (entry.target.classList.contains("html-bar")) {
+        entry.target.style.width = "90%"
+      }
+
+      else if (entry.target.classList.contains("css-bar")) {
+        entry.target.style.width = "96%"
+      }
+
+      else if (entry.target.classList.contains("javascript-bar")) {
+        entry.target.style.width = "90%"
+      }
+
+      else if (entry.target.classList.contains("python-bar")) {
+        entry.target.style.width = "75%"
+      }
+
+    }
+    else {
+      if (entry.target.classList.contains("html-bar")) {
+        entry.target.style.width = "0"
+      }
+
+      else if (entry.target.classList.contains("css-bar")) {
+        entry.target.style.width = "0"
+      }
+
+      else if (entry.target.classList.contains("javascript-bar")) {
+        entry.target.style.width = "0"
+      }
+
+      else if (entry.target.classList.contains("python-bar")) {
+        entry.target.style.width = "0"
+      }
+
+    }
+
+  })
+})
+
+skills.forEach((skill) => {
+  observer.observe(skill)
+})
